@@ -46,7 +46,8 @@
         <br></br>
         <button>
             <a href="../index.html">
-            Voltar
+                Voltar
+            </a>
         </button>
     </body>
 </html>

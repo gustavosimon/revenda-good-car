@@ -1,5 +1,5 @@
 <%-- 
-    Document   : listaClientes
+    Document   : listaVeiculos
     Created on : 10/06/2020, 22:54:10
     Author     : Gustavo Simon
 --%>
@@ -22,7 +22,7 @@
         <%
             String url = "jdbc:derby://localhost:1527/bancoGoodCar";
             Connection con = DriverManager.getConnection(url, "simon", "simon");
-            String sql = "select v.MODELO, v.ANO, v.QUILOMETRAGEM, v.POTENCIA, v.PRECO, m.NOME_MARCA from VEICULO AS V JOIN MARCA AS M ON V.ID_MARCA = M.ID";
+            String sql = "select v.MODELO, v.ANO, v.QUILOMETRAGEM, v.POTENCIA, v.PRECO, m.NOME_MARCA from VEICULO AS V JOIN MARCA AS M ON V.ID_MARCA = M.ID ORDER BY V.ID";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
         %>
@@ -48,7 +48,8 @@
         <br></br>
         <button>
             <a href="../index.html">
-            Voltar
+                Voltar
+            </a>
         </button>
     </body>
 </html>
