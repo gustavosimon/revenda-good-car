@@ -1,6 +1,6 @@
 <%-- 
-    Document   : listaClientes
-    Created on : 10/06/2020, 22:54:10
+    Document   : listaMarcas
+    Created on : 11/06/2020, 22:20:28
     Author     : Gustavo Simon
 --%>
 
@@ -14,31 +14,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Listagem de clientes</title>
+        <title>Listagem de marcas</title>
     </head>
     <body>
-        <strong>Listagem de clientes </strong>
+        <strong>Listagem de marcas</strong>
         <br></br>
         <%
             String url = "jdbc:derby://localhost:1527/bancoGoodCar";
             Connection con = DriverManager.getConnection(url, "simon", "simon");
-            String sql = "SELECT * FROM CLIENTE";
+            String sql = "SELECT * FROM MARCA";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
         %>
       <table>
         <thead>
             <tr>
-                <td>Nome</td>
-                <td>Endereço</td>
-                <td>Telefone</td>
-                <td>E-mail</td>
+                <td>ID</td>
+                <td>Nome da marca</td>
             </tr>
         </thead>
         <tbody>
             <%
                 while(rs.next()){
-                    out.println("<tr key={0}><td>"+rs.getString("NOME")+"</td><td>"+rs.getString("ENDERECO")+"</td><td>"+rs.getString("TELEFONE")+"</td><td>"+rs.getString("EMAIL")+"</td><td><button><a href=alteraFormCliente.jsp?ID="+rs.getString("ID")+">Alterar</a></button></td><td><button><a href=excluiCliente.jsp?ID="+rs.getString("ID")+">Excluir</a></button></td></tr>");
+                    out.println("<tr key={0}><td>"+rs.getString("ID")+"</td><td>"+rs.getString("NOME_MARCA")+"<td><button><a href=alteraFormMarca.jsp?ID="+rs.getString("ID")+">Alterar</a></button></td><td><button><a href=excluiMarca.jsp?ID="+rs.getString("ID")+">Excluir</a></button></td></tr>");
                 }
             %>
         </tbody>

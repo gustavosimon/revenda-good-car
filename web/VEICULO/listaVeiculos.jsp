@@ -22,7 +22,7 @@
         <%
             String url = "jdbc:derby://localhost:1527/bancoGoodCar";
             Connection con = DriverManager.getConnection(url, "simon", "simon");
-            String sql = "select v.MODELO, v.ANO, v.QUILOMETRAGEM, v.POTENCIA, v.PRECO, m.NOME_MARCA from VEICULO AS V JOIN MARCA AS M ON V.ID_MARCA = M.ID ORDER BY V.ID";
+            String sql = "select v.ID, v.MODELO, v.ANO, v.QUILOMETRAGEM, v.POTENCIA, v.PRECO, m.NOME_MARCA from VEICULO AS V JOIN MARCA AS M ON V.ID_MARCA = M.ID ORDER BY V.ID";
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
         %>
@@ -40,7 +40,7 @@
         <tbody>
             <%
                 while(rs.next()){
-                    out.println("<tr key={0}><td>"+rs.getString("MODELO")+"</td><td>"+rs.getString("ANO")+"</td><td>"+rs.getString("QUILOMETRAGEM")+"</td><td>"+rs.getString("POTENCIA")+"</td><td>"+rs.getString("PRECO")+"</td><td>"+rs.getString("NOME_MARCA")+"</td></tr>");
+                    out.println("<tr key={"+rs.getString("ID")+"}><td>"+rs.getString("MODELO")+"</td><td>"+rs.getString("ANO")+"</td><td>"+rs.getString("QUILOMETRAGEM")+"</td><td>"+rs.getString("POTENCIA")+"</td><td>"+rs.getString("PRECO")+"</td><td>"+rs.getString("NOME_MARCA")+"</td><td><button><a href=alteraFormVeiculo.jsp?ID="+rs.getString("ID")+">Alterar</a></button></td><td><button><a href=excluiVeiculo.jsp?ID="+rs.getString("ID")+">Excluir</a></button></td></tr>");
                 }
             %>
         </tbody>
