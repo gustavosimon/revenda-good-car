@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Inclusão de veículos</title>
+        <title>Inclusão de marcas</title>
     </head>
     <body>
         <strong>
@@ -21,7 +21,7 @@
         </strong>
         <br></br>
         <form method="post" action="incluiMarca.jsp">
-            Nome da marca: <input type="text" name="nome_marca"><br>
+            Nome da marca: <input type="text" name="nome_marca" required><br>
             <br>
             <input type="reset">&nbsp;<input type="submit" value="Enviar">
             <button>

@@ -28,11 +28,11 @@
         </strong>
         <br></br>
         <form method="post" action="incluiVeiculo.jsp">
-            Modelo: <input type="text" name="modelo"><br>
-            Ano: <input type="text" name="ano"><br>
-            Quilometragem: <input type="text" name="km"><br>
-            Potência: <input type="text" name=potencia><br>
-            Preço: <input type="text" name="preco"><br>
+            Modelo: <input type="text" name="modelo" required><br>
+            Ano: <input type="text" name="ano" required><br>
+            Quilometragem: <input type="text" name="km" required><br>
+            Potência: <input type="text" name="potencia" required><br>
+            Preço: <input type="text" name="preco" required><br>
             Marca: 
             <select name="marca">                                
                 <%

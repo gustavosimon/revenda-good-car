@@ -21,10 +21,10 @@
         </strong>
         <br></br>
         <form method="post" action="incluiCliente.jsp">
-            Nome: <input type="text" name="nome"><br>
-            Endereço: <input type="text" name="endereco"><br>
-            Telefone <input type="text" name="telefone"><br>
-            Email: <input type="email" name="email"><br>
+            Nome: <input type="text" name="nome" required><br>
+            Endereço: <input type="text" name="endereco" required><br>
+            Telefone <input type="text" name="telefone" required><br>
+            Email: <input type="email" name="email" required><br>
             <br>
             <input type="reset">&nbsp;<input type="submit" value="Enviar">
             <button>

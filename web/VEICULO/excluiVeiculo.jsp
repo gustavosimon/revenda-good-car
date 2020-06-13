@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Excluir veículo</title>
+        <title>Excluisão de veículo</title>
     </head>
     <body>
         <%

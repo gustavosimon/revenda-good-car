@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alteração de marcas</title>
     </head>
     <body>
         <%
@@ -23,7 +23,6 @@
             String sql = "SELECT * FROM MARCA WHERE ID=" + id;
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            Integer size = rs.getFetchSize();
             String nome_marca =  "";
             if(rs.next()){
                 nome_marca = rs.getString("NOME_MARCA");
@@ -34,7 +33,7 @@
         </strong>
         <br></br>
         <form method="post" action="alteraMarca.jsp?ID=<%=id%>">
-            Nome da marca: <input type="text" name="nome_marca" value="<%=nome_marca%>"><br>
+            Nome da marca: <input type="text" name="nome_marca" value="<%=nome_marca%>" required><br>
             <br>
             <input type="reset">&nbsp;<input type="submit" value="Enviar">
             <button>

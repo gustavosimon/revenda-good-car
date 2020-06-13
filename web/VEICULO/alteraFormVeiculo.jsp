@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alteração de veículos</title>
     </head>
     <body>
         <%
@@ -45,11 +45,11 @@
         </strong>
         <br></br>
         <form method="post" action="alteraVeiculo.jsp?ID=<%=id%>">
-            Modelo: <input type="text" name="modelo" value="<%=modelo%>"><br>
-            Ano: <input type="text" name="ano" value="<%=ano%>"><br>
-            Quilometragem: <input type="text" name="km" value="<%=quilometragem%>"><br>
-            Potência: <input type="text" name=potencia value="<%=potencia%>"><br>
-            Preço: <input type="text" name="preco" value="<%=preco%>"><br>
+            Modelo: <input type="text" name="modelo" value="<%=modelo%>" required><br>
+            Ano: <input type="text" name="ano" value="<%=ano%>" required><br>
+            Quilometragem: <input type="text" name="km" value="<%=quilometragem%>" required><br>
+            Potência: <input type="text" name=potencia value="<%=potencia%>" required><br>
+            Preço: <input type="text" name="preco" value="<%=preco%>" required><br>
             Marca: 
             <select name="marca" value="<%=id_marca%>">                                
                 <%

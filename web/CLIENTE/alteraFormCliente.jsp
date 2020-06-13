@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alteração de cliente</title>
     </head>
     <body>
         <%
@@ -40,10 +40,10 @@
         </strong>
         <br></br>
         <form method="post" action="alteraCliente.jsp?ID=<%=id%>">
-            Nome: <input type="text" name="nome" value="<%=nome%>"><br>
-            Endereço: <input type="text" name="endereco" value="<%=endereco%>"><br>
-            Telefone <input type="text" name="telefone" value="<%=telefone%>"><br>
-            Email: <input type="email" name="email" value="<%=email%>"><br>
+            Nome: <input type="text" name="nome" value="<%=nome%>"  required><br>
+            Endereço: <input type="text" name="endereco" value="<%=endereco%>" required><br>
+            Telefone <input type="text" name="telefone" value="<%=telefone%>"  required><br>
+            Email: <input type="email" name="email" value="<%=email%>"  required><br>
             <br>
             <input type="reset">&nbsp;<input type="submit" value="Enviar">
             <button>
