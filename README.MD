@@ -1,4 +1,4 @@
-`Comandos SQL para criaçã do banco`
+`Comandos SQL para criação do banco`
 
 ```bash
 
